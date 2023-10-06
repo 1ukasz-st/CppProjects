@@ -1,4 +1,9 @@
 #include <SFML/Graphics.hpp>
+#include <utility>
+
+struct face{
+    std::vector<std::pair<int,int>
+};
 
 int main()
 {
