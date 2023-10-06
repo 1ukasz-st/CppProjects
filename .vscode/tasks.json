@@ -1,8 +1,20 @@
 {
-    "version":"2.0.0",
-    "tasks":[
-        {
-            
-        }
-    ]
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "Compile C++",
+			"command": "g++ -o '${fileDirname}/bin/${fileBasenameNoExtension}.exe' '${file}' -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio -lsfml-network -std=c++17 -O3 -Wno-narrowing -g",
+		},
+		{
+			"type": "shell",
+			"label": "Run C++",
+			"command": "${fileDirname}/bin/${fileBasenameNoExtension}.exe",
+		},
+		{
+			"type": "shell",
+			"label": "Run Python",
+			"command": "python3 '${fileDirname}/${fileBasenameNoExtension}.py'",
+		},
+	]
 }
